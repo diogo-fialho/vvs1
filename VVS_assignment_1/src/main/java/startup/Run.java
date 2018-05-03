@@ -25,7 +25,7 @@ public class Run {
         }
 		
 		System.out.println("longestPrefixOf(\"shellsort\"):");
-		System.out.println(st.longestPrefixOf("uv"));
+		System.out.println(st.longestPrefixOf("jorgee"));
 		
 		System.out.println("keysWithPrefix(\"shor\"):");
         for (String s : st.keysWithPrefix("shor"))

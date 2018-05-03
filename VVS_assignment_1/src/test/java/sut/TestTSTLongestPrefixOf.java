@@ -48,10 +48,10 @@ public class TestTSTLongestPrefixOf {
 		assertEquals("", st.longestPrefixOf("jorgge"));
 	}
 	@Test
-	public void testNond() {
-		//TODO falta versao em que x fica == null
+	public void testRootNull() {
+		TST<Integer> temp = new TST<>();
+		assertEquals("", temp.longestPrefixOf("pao"));
 	}
-	
 	@Test
 	public void testExists() {
 		assertEquals("shells", st.longestPrefixOf("shellsore"));

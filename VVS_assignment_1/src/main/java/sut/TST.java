@@ -140,7 +140,7 @@ public class TST<T> {
         int length = 0;
         Node<T> x = root;
         int i = 0;
-        while (x != null && i < query.length()) {
+        while (x != null && i < query.length()) { // branch nao reachable        	
             char c = query.charAt(i);
             if      (c < x.c) x = x.left;
             else if (c > x.c) x = x.right;
