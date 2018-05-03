@@ -45,6 +45,21 @@ public class TestTSTKeysWithPrefix {
 	}
 	
 	@Test
+	public void testEmptyKey() {
+		String s = "";
+		assertThrows(IllegalArgumentException.class, () -> {st.keysWithPrefix(s);});
+	}
+	
+	@Test
+	public void testNond() {
+		
+		TST<Integer> st = new TST<>();
+		st.put("dhh",null);
+		assertEquals(new LinkedList<>(), st.keysWithPrefix("dhh"));
+		
+	}
+	
+	@Test
 	public void testRepeatedPrefix() {
 		String s = "she";
 		LinkedList<String> list = new LinkedList<String>();
