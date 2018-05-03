@@ -49,11 +49,12 @@ public class TestTSTLongestPrefixOf {
 	}
 	@Test
 	public void testNond() {
-		assertEquals("", new TST<>());
+		//TODO falta versao em que x fica == null
 	}
 	
 	@Test
 	public void testExists() {
 		assertEquals("shells", st.longestPrefixOf("shellsore"));
 	}
+	
 }
