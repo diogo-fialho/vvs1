@@ -47,6 +47,13 @@ public class TestTSTLongestPrefixOf {
 	public void testNonExists() {
 		assertEquals("", st.longestPrefixOf("jorgge"));
 	}
+	
+	@Test
+	public void test3() {
+		//teste usado para conseguir edge-pair 10 - 6 - 7 && 12 - 6 - 8
+		assertEquals("", st.longestPrefixOf("taaa"));
+	}
+	
 	@Test
 	public void testRootNull() {
 		TST<Integer> temp = new TST<>();

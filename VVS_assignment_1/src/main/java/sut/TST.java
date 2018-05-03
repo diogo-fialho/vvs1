@@ -142,6 +142,7 @@ public class TST<T> {
         int i = 0;
         while (x != null && i < query.length()) { // branch nao reachable        	
             char c = query.charAt(i);
+            System.out.println((c > x.c) + "" + c);
             if      (c < x.c) x = x.left;
             else if (c > x.c) x = x.right;
             else {
