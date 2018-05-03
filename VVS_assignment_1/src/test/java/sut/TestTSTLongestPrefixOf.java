@@ -61,7 +61,7 @@ public class TestTSTLongestPrefixOf {
 	}
 	@Test
 	public void testExists() {
-		assertEquals("shells", st.longestPrefixOf("shellsore"));
+		assertEquals("shells", st.longestPrefixOf("shellsort"));
 	}
 	
 }
