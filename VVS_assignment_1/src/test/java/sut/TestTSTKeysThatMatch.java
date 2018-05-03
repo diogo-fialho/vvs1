@@ -36,12 +36,6 @@ public class TestTSTKeysThatMatch {
 	}
 	
 	@Test
-	public void testNullArg() {
-		String s = null;
-		assertThrows(IllegalArgumentException.class, () -> {st.keysThatMatch(s);});
-	}
-	
-	@Test
 	public void testNoMatch() {
 		String s = "zzz";
 		assertEquals(new LinkedList<>(), st.keysThatMatch(s));
