@@ -46,7 +46,6 @@ public class TestTSTKeysThatMatch {
 		String s = "she...";
 		Queue<String> list = new LinkedList<String>();
 		list.add("shells");
-		System.out.println(st.keysThatMatch(s).toString());
 		assertEquals(list, st.keysThatMatch(s));
 	}
 	

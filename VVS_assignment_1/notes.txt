@@ -1,0 +1,2 @@
+-longestPrefixOf has one infeasible test (unreachable branch)
+
