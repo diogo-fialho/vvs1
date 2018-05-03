@@ -51,6 +51,15 @@ public class TestTSTKeysWithPrefix {
 	}
 	
 	@Test
+	public void testNond() {
+		
+		TST<Integer> st = new TST<>();
+		st.put("dhh",null);
+		assertEquals(new LinkedList<>(), st.keysWithPrefix("dhh"));
+		
+	}
+	
+	@Test
 	public void testRepeatedPrefix() {
 		String s = "she";
 		LinkedList<String> list = new LinkedList<String>();
