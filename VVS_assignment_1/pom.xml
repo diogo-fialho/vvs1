@@ -95,6 +95,7 @@
 	          <artifactId>junit-quickcheck-generators</artifactId>
 	          <version>0.7</version>
 	      </dependency>
+	      
 	</dependencies>
 
 	<build>
