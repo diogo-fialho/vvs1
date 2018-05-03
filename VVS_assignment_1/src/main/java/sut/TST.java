@@ -148,11 +148,12 @@ public class TST<T> {
         int length = 0;
         Node<T> x = root;
         int i = 0;
-        while (x != null && i < query.length()) { // branch nao reachable
+        while (x != null && i < query.length()) {
         	path += "6,";
             char c = query.charAt(i);
             path += "8,";
             path += "9,";
+            System.out.println(c + " :: " + x.c + " res - " + (c < x.c));
             if      (c < x.c) { 
             	path += "10,";
             	x = x.left; 
