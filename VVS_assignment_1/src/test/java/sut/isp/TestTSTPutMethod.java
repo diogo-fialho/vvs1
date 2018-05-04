@@ -1,10 +1,12 @@
-package sut;
+package sut.isp;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import sut.TST;
 
 //further tested in contains
 public class TestTSTPutMethod {
@@ -26,6 +28,10 @@ public class TestTSTPutMethod {
 		});
 	}
 	
+	
+	//BC (PE,+1,avg)  ou (!BE,+1,avg) que muda td.....
+	
+//	(PE,+1,avg)
 	@Test
 	public void testRepeatedKey(){
 		
@@ -34,6 +40,9 @@ public class TestTSTPutMethod {
 		
 	}
 	
+	
+	
+	//(PE,+1,S)
 	@Test
 	public void testRepeatedPrefix(){
 		
@@ -42,6 +51,16 @@ public class TestTSTPutMethod {
 		
 	}
 	
+	//(!PE,+1,avg)
+	@Test
+	public void testNewKey() {
+		
+		String key = "shells";
+		st.put(key, 5);
+		
+	}
+	
+	//(PE,+1,L)
 	@Test
 	public void testLargestKey(){
 		
@@ -51,21 +70,17 @@ public class TestTSTPutMethod {
 		
 	}
 	
+	//(PE,0,avg)
 	@Test
-	public void testAvgtKey(){
+	public void testEmptyTrie(){
 		
-		String key = "avgkey";
-		st.put(key, 6);
+		String key = "loooooooooooooooooooooongkey";
+		st.put(key, 5);
 		
 		
 	}
 	
-	@Test
-	public void testSmallest(){
-		
-		String key = "z";
-		st.put(key, 7);
-		
-	}
+	
+
 	
 }

@@ -1,4 +1,4 @@
--longestPrefixOf has one infeasible test (unreachable branch)
+-longestPrefixOf has one infeasible test (unreachable branch) (fixed)
 
 --longestPrefixOf graph--
 1 2
@@ -22,3 +22,15 @@
 16 6
 --
 
+pt temos que separar os testes por tipos de criterio, acho que por package era bacano
+
+SUGESTAO P Packages
+-1  para graph based tests (pontos 2 e 3, dao subsume ao 1 logo ta incluido mb?)
+-1  para data flow (ponto 4)
+-1 p logic based
+-1 p input state partiioning
+-1 p quickcheck
+
+e temos que adicionar javadoc a cada test
+
+se chegares a parte de input space antes de eu dizer qq coisa avisa ja tenho umas ideias p isso
