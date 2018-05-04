@@ -111,5 +111,37 @@ public class TestTSTLongestPrefixOf {
 		st.put("oamlpn", 6);
 		assertEquals("", st.longestPrefixOf("oamlppa"));
 	}
+	@Test
+	public void test8() {
+		// [1,3,5,6,8,9,11,13,14,15,16,6,7]
+		String s = "";
+		TST<Integer> st = new TST<>();
+		st.put("d", 1);
+		assertEquals("d", st.longestPrefixOf("d"));
+	}
+	@Test
+	public void test9() {
+		// [1,3,5,6,8,9,10,6,8,9,11,13,14,15,16,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("diogo", 1);
+		st.put("c", 2);
+		assertEquals("c", st.longestPrefixOf("couves"));
+	}
 	
+	@Test
+	public void test10() {
+		// [1,3,5,6,8,9,11,13,14,15,16,6,8,9,11,12,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("d", 1);
+		st.put("dgogo", 2);
+		assertEquals("d", st.longestPrefixOf("dio"));
+	}
+	@Test
+	public void test11() {
+		// [1,3,5,6,8,9,11,12,6,8,9,11,13,14,15,16,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("a", 1);
+		st.put("d", 2);
+		assertEquals("d", st.longestPrefixOf("dio"));
+	}
 }
