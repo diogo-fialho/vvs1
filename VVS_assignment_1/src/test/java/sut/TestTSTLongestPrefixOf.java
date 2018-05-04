@@ -144,4 +144,78 @@ public class TestTSTLongestPrefixOf {
 		st.put("d", 2);
 		assertEquals("d", st.longestPrefixOf("dio"));
 	}
+	@Test
+	public void test12() {
+		// [1,3,5,6,8,9,10,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("u", 1);
+		assertEquals("", st.longestPrefixOf("t"));
+	} 
+	@Test
+	public void test13() {
+		// [1,3,5,6,8,9,11,12,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("a", 1);
+		assertEquals("", st.longestPrefixOf("t"));
+	} 
+	@Test
+	public void test14() {
+		// [1,3,5,6,8,9,10,6,8,9,10,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("v", 1);
+		st.put("u", 2);
+		assertEquals("", st.longestPrefixOf("t"));
+	}
+	@Test
+	public void test15() {
+		// [1,3,5,6,8,9,10,6,8,9,11,13,14,16,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("v", 1);
+		st.put("tu", 2);
+		assertEquals("", st.longestPrefixOf("t"));
+	}
+	@Test
+	public void test16() {
+		// [1,3,5,6,8,9,11,12,6,8,9,11,12,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("e", 1);
+		st.put("r", 2);
+		assertEquals("", st.longestPrefixOf("t"));
+	}
+	@Test
+	public void test17() {
+		// [1,3,5,6,8,9,11,12,6,8,9,11,13,14,16,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("e", 1);
+		st.put("tu", 2);
+		assertEquals("", st.longestPrefixOf("t"));
+	} 
+	@Test
+	public void test18() {
+		// [1,3,5,6,8,9,11,13,14,16,6,8,9,10,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("te", 1);
+		assertEquals("", st.longestPrefixOf("td"));
+	}
+	@Test
+	public void test19() {
+		// [1,3,5,6,8,9,11,13,14,16,6,8,9,11,12,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("te", 1);
+		assertEquals("", st.longestPrefixOf("tf"));
+	} 
+	@Test
+	public void test20() {
+		// [1,3,5,6,8,9,11,13,14,16,6,8,9,11,13,14,16,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("tff", 1);
+		assertEquals("", st.longestPrefixOf("tf"));
+	} 
+	@Test
+	public void test21() {
+		// [1,3,5,6,8,9,11,13,14,16,6,8,9,11,13,14,15,16,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("tf", 1);
+		assertEquals("tf", st.longestPrefixOf("tf"));
+	}
 }
