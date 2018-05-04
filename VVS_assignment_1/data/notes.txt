@@ -1,5 +1,6 @@
 -longestPrefixOf has one infeasible test (unreachable branch)
 
+--longestPrefixOf graph--
 1 2
 1 3
 3 4
@@ -19,3 +20,5 @@
 14 16
 15 16
 16 6
+--
+
