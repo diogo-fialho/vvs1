@@ -274,21 +274,21 @@ public class TST<T> {
     }
     
     
-    public void delete(String key, T val) {
+    public void delete(String key) {
         if (key == null)
             throw new IllegalArgumentException("calls delete with null key");
         if (contains(key)) 
         	n--;
-        root = delete(root, key, val, 0);
+        root = delete(root, key, 0);
     }
 
-    private Node<T> delete(Node<T> x, String key, T val, int d) {
+    private Node<T> delete(Node<T> x, String key, int d) {
         char c = key.charAt(d);
         if (x == null)		            return x;
-        if      (c < x.c)               x.left  = delete(x.left,  key, val, d);
-        else if (c > x.c)               x.right = delete(x.right, key, val, d);
-        else if (d < key.length() - 1)  x.mid   = delete(x.mid,   key, val, d+1);
-        else                            x.val   = val;
+        if      (c < x.c)               x.left  = delete(x.left,  key, d);
+        else if (c > x.c)               x.right = delete(x.right, key, d);
+        else if (d < key.length() - 1)  x.mid   = delete(x.mid,   key, d+1);
+        else                            x.val   = null;
         return x;
     }
     
