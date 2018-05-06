@@ -40,7 +40,7 @@ public class TST<T> {
     private static class Node<T> {
         private char c;                    // character
         private Node<T> left, mid, right;  // left, middle, and right subtries
-        private T val;                     // value associated with string
+        private T val; // value associated with string
     }
 
     /**
@@ -255,4 +255,41 @@ public class TST<T> {
         	collect(x.right, prefix, i, pattern, queue);
     }
 
+    public boolean equals(Object o) {
+    	
+    	if ( !(o instanceof TST) || o==null ) return false;
+    	if( this == o) return true;
+    	
+    	TST<T> other = (TST<T>) o;
+    	boolean result = this.size() == other.size();
+    	
+    	for(String key : this.keys()) {
+    		
+    		result &= this.get(key) == other.get(key);
+    		
+    	}
+    	
+    	return result;
+    	
+    }
+    
+    
+    public void delete(String key, T val) {
+        if (key == null)
+            throw new IllegalArgumentException("calls delete with null key");
+        if (contains(key)) 
+        	n--;
+        root = delete(root, key, val, 0);
+    }
+
+    private Node<T> delete(Node<T> x, String key, T val, int d) {
+        char c = key.charAt(d);
+        if (x == null)		            return x;
+        if      (c < x.c)               x.left  = delete(x.left,  key, val, d);
+        else if (c > x.c)               x.right = delete(x.right, key, val, d);
+        else if (d < key.length() - 1)  x.mid   = delete(x.mid,   key, val, d+1);
+        else                            x.val   = val;
+        return x;
+    }
+    
 }

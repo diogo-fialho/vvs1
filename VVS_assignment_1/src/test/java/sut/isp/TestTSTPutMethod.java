@@ -1,5 +1,6 @@
 package sut.isp;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -31,12 +32,13 @@ public class TestTSTPutMethod {
 	
 	//BC (PE,+1,avg)  ou (!BE,+1,avg) que muda td.....
 	
-//	(PE,+1,avg)
+//	(PE,+1,avg) BASE CHOICE
 	@Test
 	public void testRepeatedKey(){
 		
 		String key = "prefix";
 		st.put(key, 3); //val diferente?
+		assertEquals(new Integer(3),st.get(key));
 		
 	}
 	
@@ -48,6 +50,7 @@ public class TestTSTPutMethod {
 		
 		String key = "pre";
 		st.put(key, 4);
+		assertEquals(new Integer(4),st.get(key));
 		
 	}
 	
@@ -57,6 +60,7 @@ public class TestTSTPutMethod {
 		
 		String key = "shells";
 		st.put(key, 5);
+		assertEquals(new Integer(5),st.get(key));
 		
 	}
 	
@@ -66,6 +70,7 @@ public class TestTSTPutMethod {
 		
 		String key = "loooooooooooooooooooooongkey";
 		st.put(key, 5);
+		assertEquals(new Integer(5),st.get(key));
 		
 		
 	}
@@ -76,7 +81,7 @@ public class TestTSTPutMethod {
 		
 		String key = "loooooooooooooooooooooongkey";
 		st.put(key, 5);
-		
+		assertEquals(new Integer(5),st.get(key));
 		
 	}
 	
