@@ -20,7 +20,19 @@ public class LineAndBranchCover {
 		TST<Integer> st = new TST<>();
 		assertThrows(IllegalArgumentException.class, () -> {st.contains(s);});
 	}
-
+	@Test
+	public void testNotNullContains() {
+		String s = "s";
+		TST<Integer> st = new TST<>();
+		assertFalse(st.contains(s));
+	}
+	@Test
+	public void testNotNullContains2() {
+		String s = "s";
+		TST<Integer> st = new TST<>();
+		st.put(s, 1);
+		assertTrue(st.contains(s));
+	}
 	/*
 	 * Get coverage
 	 */
@@ -87,6 +99,40 @@ public class LineAndBranchCover {
 		 // [1,3,5,6,7]
 		TST<Integer> temp = new TST<>();
 		assertEquals("", temp.longestPrefixOf("pao"));
+	}
+	@Test
+	public void test1() {
+		// [1,3,5,6,8,9,11,13,14,16,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("shells", 1);
+		st.put("she", 2);
+		assertEquals("", st.longestPrefixOf("s"));
+	}
+	@Test
+	public void test2() {
+		// [1,3,5,6,8,9,10,6,8,9,11,12,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("shells", 1);
+		st.put("she", 2);
+		assertEquals("", st.longestPrefixOf("he"));
+	}
+	@Test
+	public void test3() {
+		// [1,3,5,6,8,9,11,12,6,8,9,10,6,7]
+		String s = "";
+		TST<Integer> st = new TST<>();
+		st.put("diogo", 1);
+		st.put("jorge", 2);
+		assertEquals("", st.longestPrefixOf("gu"));
+	}
+	@Test
+	public void test4() {
+		// [1,3,5,6,8,9,11,13,14,15,16,6,8,9,10,6,7]
+		String s = "";
+		TST<Integer> st = new TST<>();
+		st.put("d", 1);
+		st.put("dv", 2);
+		assertEquals("d", st.longestPrefixOf("du"));
 	}
 	/*
 	 * Keys that match coverage

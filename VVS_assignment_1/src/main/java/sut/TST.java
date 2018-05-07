@@ -133,50 +133,26 @@ public class TST<T> {
      * @throws IllegalArgumentException if {@code query} is {@code null}
      */
     public String longestPrefixOf(String query) {
-    	String path = "";
-    	path += "1,";
-        if (query == null) {
-        	path += "2,";
+    	if (query == null)
             throw new IllegalArgumentException("calls longestPrefixOf() with null argument");
-        }
-        path += "3,";
-        if (query.length() == 0) { 
-        	path += "4,";
+        if (query.length() == 0) 
         	return null;
-        }
-        path += "5,";
         int length = 0;
         Node<T> x = root;
         int i = 0;
         while (x != null && i < query.length()) {
-        	path += "6,";
             char c = query.charAt(i);
-            path += "8,";
-            path += "9,";
-            System.out.println(c + " :: " + x.c + " res - " + (c < x.c));
-            if      (c < x.c) { 
-            	path += "10,";
-            	x = x.left; 
-            }
-            else if (c > x.c) {
-            	path += "12,";
-            	x = x.right;
-            }
+            if      (c < x.c) x = x.left;
+            else if (c > x.c) x = x.right;
             else {
-            	path += "13,";
                 i++;
-                path += "14,";
-                if (x.val != null) {
+                if (x.val != null) 
                 	length = i;
-                	path += "15,";
-                }
-                path += "16,";
                 x = x.mid;
             }
         }
-        path += "7";
-        System.out.println(path);
         return query.substring(0, length);
+
     }
 
     /**
