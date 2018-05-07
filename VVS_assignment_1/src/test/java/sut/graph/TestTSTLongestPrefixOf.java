@@ -33,28 +33,11 @@ public class TestTSTLongestPrefixOf {
 		}
 	}
 	@Test
-	public void testNullArg() {
-		// [1, 2]
-		String s = null;
-		TST<Integer> st = new TST<>();
-		assertThrows(IllegalArgumentException.class, () -> {st.longestPrefixOf(s);});
-	}
-	@Test
-	public void testEmpty() {
-		// [1, 3, 4]
-		String s = "";
-		TST<Integer> st = new TST<>();
-		assertEquals(null, st.longestPrefixOf(s));
-	}
-	@Test
-	public void testRootNull() {
-		 // [1,3,5,6,7]
-		TST<Integer> temp = new TST<>();
-		assertEquals("", temp.longestPrefixOf("pao"));
-	}
-	@Test
 	public void test1() {
 		// [1,3,5,6,8,9,11,13,14,16,6,7]
+		TST<Integer> st = new TST<>();
+		st.put("shells", 1);
+		st.put("she", 2);
 		assertEquals("", st.longestPrefixOf("s"));
 	}
 	@Test

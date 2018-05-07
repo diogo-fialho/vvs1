@@ -1,4 +1,4 @@
-package sut.graph;
+package sut.dataflow;
 
 import static org.junit.jupiter.api.Assertions.*;
 
