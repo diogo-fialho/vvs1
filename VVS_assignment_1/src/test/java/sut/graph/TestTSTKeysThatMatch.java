@@ -1,9 +1,11 @@
-package sut;
+package sut.graph;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import sut.TST;
 
 import java.io.File;
 import java.io.FileNotFoundException;

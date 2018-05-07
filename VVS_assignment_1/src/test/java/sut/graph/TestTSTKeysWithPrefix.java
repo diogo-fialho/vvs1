@@ -1,4 +1,4 @@
-package sut;
+package sut.graph;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -9,6 +9,8 @@ import java.util.Scanner;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+
+import sut.TST;
 
 public class TestTSTKeysWithPrefix {
 
