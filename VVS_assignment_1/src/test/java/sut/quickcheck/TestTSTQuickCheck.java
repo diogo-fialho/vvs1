@@ -72,7 +72,7 @@ public class TestTSTQuickCheck {
 	
 	}
 	
-	@Property(trials=2)
+	@Property(trials=20)
 	public void testContains(@InRange(minInt = 2, maxInt = 50) @From(MyCharacterGenerator.class) String key) {
 		
 		TST<Integer> tst = new TST<Integer>();

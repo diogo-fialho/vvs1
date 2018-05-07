@@ -30,7 +30,7 @@ public class TestTSTPutMethod {
 	}
 	
 	
-	//BC (PE,+1,avg)  ou (!BE,+1,avg) que muda td.....
+	//BC (PE,+1,avg)  
 	
 //	(PE,+1,avg) BASE CHOICE
 	@Test
