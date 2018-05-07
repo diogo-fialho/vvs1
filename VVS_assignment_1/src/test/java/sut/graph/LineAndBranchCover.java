@@ -95,7 +95,7 @@ public class LineAndBranchCover {
 	public void testNullArgKeysTM() {
 		String s = null;
 		TST<Integer> st = new TST<>();
-		assertThrows(IllegalArgumentException.class, () -> {st.keysThatMatch(s);});
+		assertEquals(new LinkedList<>(), st.keysThatMatch(s));
 	}
 	@Test
 	public void testKeysNoMatch() {

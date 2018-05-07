@@ -21,7 +21,20 @@
 15 16
 16 6
 --
-
+--defs
+query 1 
+length 5 15
+x 5 10 12 16 
+i 5 13
+c 8
+--
+--uses
+query 1 3 6 8
+length 7
+x 6 9 10 11 12 14 16
+i 6 13 15
+c 9 11 
+--
 pt temos que separar os testes por tipos de criterio, acho que por package era bacano
 
 SUGESTAO P Packages
